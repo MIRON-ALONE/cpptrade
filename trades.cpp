@@ -46,6 +46,7 @@ int main() {
     // Добавляем примерные сделки
     instrument.addTrade({100.0, 10, std::chrono::system_clock::now().time_since_epoch().count(), 1});
     instrument.addTrade({101.0, 5, std::chrono::system_clock::now().time_since_epoch().count(), -1});
+    instrument.addTrade({102.0, 15,  std::chrono::system_clock::now().time_since_epoch().count(), -1});
 
     // Рассчитываем общий объем сделок за последние 10 секунд
     int total_volume = TradeVolumeCalculator::calculateVolumeLast10Seconds(instrument);
